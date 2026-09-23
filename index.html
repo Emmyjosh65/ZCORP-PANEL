@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#263747">
+  <title>ZCORP PANEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <section id="loginView" class="login-view">
+      <div class="login-card glass">
+        <div class="brand-mark">Z</div>
+        <p class="eyebrow">ZCORP HOSTING</p>
+        <h1>ZCORP PANEL</h1>
+        <p class="muted">Sign in with the login details sent to you by the ZCORP Telegram bot.</p>
+
+        <form id="loginForm">
+          <label>Username</label>
+          <input id="username" autocomplete="username" placeholder="zcorp_XXXXXXXX" required>
+          <label>Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Your panel password" required>
+          <button class="primary full" type="submit">LOGIN TO PANEL</button>
+        </form>
+
+        <div id="loginError" class="error hidden"></div>
+        <a class="store-link" href="https://t.me/ZCORPSTORE_BOT" target="_blank" rel="noopener">
+          Get Login from Telegram ↗
+        </a>
+      </div>
+    </section>
+
+    <section id="panelView" class="panel-view hidden">
+      <header class="topbar">
+        <div class="top-title">
+          <strong>ZCORP PANEL</strong>
+          <span>Hosting Dashboard</span>
+        </div>
+        <div class="top-actions">
+          <button id="logoutBtn" class="icon-btn" title="Logout">⇥</button>
+        </div>
+      </header>
+
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="Console">Console</button>
+        <button class="tab" data-tab="Files">Files</button>
+        <button class="tab" data-tab="Databases">Databases</button>
+        <button class="tab" data-tab="Schedules">Schedules</button>
+        <button class="tab" data-tab="Users">Users</button>
+        <button class="tab" data-tab="Backups">Backups</button>
+        <button class="tab" data-tab="Network">Network</button>
+        <button class="tab" data-tab="Startup">Startup</button>
+        <button class="tab" data-tab="Settings">Settings</button>
+      </nav>
+
+      <main class="content">
+        <div class="server-heading">
+          <div>
+            <h2 id="serverName">ZCORP PANEL Server</h2>
+            <p id="planLine">ZCORP Hosting</p>
+          </div>
+          <div class="server-actions">
+            <button id="startBtn" class="action start">Start</button>
+            <button id="restartBtn" class="action restart">Restart</button>
+            <button id="stopBtn" class="action stop">Stop</button>
+          </div>
+        </div>
+
+        <div class="console-card glass" id="consoleCard">
+          <div class="console" id="consoleOutput">
+            <div><span class="gold">[ZCORP PANEL]</span> Connecting to your panel account...</div>
+            <div><span class="gold">[ZCORP PANEL]</span> Dashboard loaded.</div>
+            <div><span class="green">[Server]</span> Status: online</div>
+          </div>
+          <form id="commandForm" class="command">
+            <span>»</span>
+            <input id="commandInput" placeholder="Type a command..." autocomplete="off">
+          </form>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-icon">⌁</div><div><small>Address</small><b id="address">zcorp-panel</b></div></div>
+          <div class="stat-card"><div class="stat-icon clock">◷</div><div><small>Uptime</small><b id="uptime">Starting</b></div></div>
+          <div class="stat-card"><div class="stat-icon">▦</div><div><small>CPU Load</small><b id="cpu">0.00%</b></div></div>
+          <div class="stat-card"><div class="stat-icon">▤</div><div><small>Memory</small><b id="memory">0 MB</b></div></div>
+          <div class="stat-card"><div class="stat-icon">▰</div><div><small>Disk</small><b id="disk">250 MB</b></div></div>
+          <div class="stat-card"><div class="stat-icon">⇣</div><div><small>Network (Inbound)</small><b id="netIn">0 B</b></div></div>
+          <div class="stat-card"><div class="stat-icon">⇡</div><div><small>Network (Outbound)</small><b id="netOut">0 B</b></div></div>
+        </div>
+
+        <div id="tabPanel" class="tab-panel glass">
+          <h3 id="tabTitle">Console</h3>
+          <p id="tabDescription">Your server console and account status appear here.</p>
+          <div id="tabBody" class="tab-body"></div>
+        </div>
+      </main>
+      <footer>ZCORP PANEL • <span id="footerPlan">Portal</span></footer>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
