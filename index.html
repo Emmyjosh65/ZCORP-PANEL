@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ZCORP PANEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage">
+  <div class="loginCard">
+    <div class="brand">Z</div>
+
+    <h1>ZCORP PANEL</h1>
+    <p>Secure panel login</p>
+
+    <input id="username" placeholder="Username">
+
+    <input
+      id="password"
+      type="password"
+      placeholder="Password"
+    >
+
+    <button id="loginBtn">LOGIN</button>
+
+    <a href="https://t.me/Zcorpmd_bot">
+      Get login from Telegram
+    </a>
+
+    <small id="err"></small>
+  </div>
+</div>
+
+
+<div id="panel" class="hidden">
+
+<header>
+  <b>☰ ZCORP PANEL</b>
+  <span id="userTop"></span>
+</header>
+
+
+<nav>
+  <button class="active">Console</button>
+  <button>Files</button>
+  <button>Databases</button>
+  <button>Schedules</button>
+  <button>Users</button>
+  <button>Backups</button>
+  <button>Network</button>
+  <button>Startup</button>
+  <button>Settings</button>
+</nav>
+
+
+<main>
+
+<div class="serverHead">
+
+  <div>
+    <h2>ZCORP Server</h2>
+    <small id="sub">ZCORP PANEL</small>
+  </div>
+
+  <div>
+    <button class="start">Start</button>
+    <button class="restart">Restart</button>
+    <button class="stop">Stop</button>
+  </div>
+
+</div>
+
+
+<div class="console" id="console">
+  <div>╔══ ZCORP PANEL ══╗</div>
+  <div>✓ Authenticated panel session.</div>
+  <div>✓ Console interface ready.</div>
+</div>
+
+
+<div class="command">
+  <span>»</span>
+  <input
+    id="cmd"
+    placeholder="Type a command..."
+  >
+</div>
+
+
+<section class="stats">
+
+  <article>
+    ⌁
+    <span>
+      Address
+      <strong>zcorp-panel</strong>
+    </span>
+  </article>
+
+  <article>
+    ◷
+    <span>
+      Uptime
+      <strong id="uptime">0h 0m</strong>
+    </span>
+  </article>
+
+  <article>
+    ▣
+    <span>
+      CPU Load
+      <strong>Online</strong>
+    </span>
+  </article>
+
+  <article>
+    ▤
+    <span>
+      Memory
+      <strong>Panel account</strong>
+    </span>
+  </article>
+
+  <article>
+    ▰
+    <span>
+      Disk
+      <strong id="disk">0 MB</strong>
+    </span>
+  </article>
+
+  <article>
+    ☁
+    <span>
+      Network
+      <strong>Connected</strong>
+    </span>
+  </article>
+
+</section>
+
+</main>
+
+<footer>
+  ZCORP PANEL • Secure hosting dashboard
+</footer>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
